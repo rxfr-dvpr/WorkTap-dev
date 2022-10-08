@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --main-font: 'Montserrat', sans-serif;
+    --primary-color: #000;
+    --green-color: rgba(29, 191, 115, 1);
+    --orange-color: #FBA457;
+    --dark-purple: #B0AAD0;
+    --white-color: #fff;
+    --light-purple: #F2F0FE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+
+    &::selection {
+        background: var(--green-color);
+        color: var(--primary-color);
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.green-link {
+    max-width: max-content;
+    width: 100%;
+    color: var(--white-color);
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: var(--green-color);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .5s;
+    border: solid 2px transparent;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+        color: var(--green-color);
+        border-color: var(--green-color);
+        background: var(--white-color);
+    }
+}
+
+.light-green-link {
+    color: var(--green-color);
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: var(--light-purple);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .4s;
+    border: solid 2px var(--green-color);
+
+    &:hover {
+        color: var(--light-purple);
+        background: var(--green-color);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-purple);
+    border-radius: 10px;
+}
+
+h1 {
+    span {
+        color: var(--green-color);
+    }
+}
+
+h2 {
+    font-size: calc(18px + 6 * (100vw / 1920));
+    color: var(--primary-color);
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
